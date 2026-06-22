@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Penulis & Pustaka - HaditsEdu</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; line-height: 1.8; }
+        header { background-color: #044335; border-bottom: 5px solid #b38f43; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: bold; color: #ffffff; text-decoration: none; }
+        .logo span { color: #e2c074; }
+        nav { display: flex; gap: 15px; }
+        .nav-link { color: #ffffff; text-decoration: none; padding: 8px 16px; font-size: 14px; border-radius: 4px; }
+        .nav-link.active { background-color: #075949; }
+        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; border: 1px solid #e2e8f0; }
+        h1, h2 { color: #044335; margin-bottom: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        .pustaka-list { margin-left: 20px; margin-bottom: 30px; color: #475569;}
+        .pustaka-list li { margin-bottom: 10px; }
+        .profile-card { background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 20px; border-radius: 6px; margin-bottom: 35px; }
+        footer { background-color: #03231c; color: #94a3b8; text-align: center; padding: 25px; font-size: 13px; margin-top: 80px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Hadits<span>Edu</span></a>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="muqaddimah.html" class="nav-link">Muqaddimah</a>
+            <a href="bab1-1.html" class="nav-link">BAB I</a>
+            <a href="bab2-1.html" class="nav-link">BAB II</a>
+            <a href="penulis.html" class="nav-link active">Penulis</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Tentang Penulis</h2>
+        <div class="profile-card">
+            <p><strong>Nama:</strong> Nurhasanah</p>
+            <p><strong>NIM:</strong> 251305036</p>
+            <p><strong>Instansi:</strong> Universitas Islam Negeri (UIN) Sultan Maulana Hasanuddin Banten</p>
+            <p><strong>Program Studi:</strong> Ilmu Hadis</p>
+            <p>Perkenalkan, nama saya Nurhasanah, berasal dari Tangerang dan saat ini sedang menempuh perkuliahan di UIN SMH Banten pada Program Studi Ilmu Hadis. Selama masa kuliah, saya bertempat tinggal di Pondok Pesantren Salafiyah Riyadhul Awamil, Kabupaten Serang, Banten. Proyek e-book interaktif ini dibangun sebagai implementasi dari perkuliahan Studi Hadis Digital.</p>
+        </div>
+
+        <h2>Daftar Pustaka</h2>
+        <ul class="pustaka-list">
+            <li>Al-Bukhari, Muhammad bin Ismail. <em>Sahih al-Bukhari</em>. Beirut: Dar Tawq al-Najah.</li>
+            <li>Muslim bin al-Hajjaj. <em>Sahih Muslim</em>. Beirut: Dar Ihya' al-Turath al-'Arabi.</li>
+            <li>Al-Nawawi, Yahya bin Syaraf. <em>Al-Minhaj fi Syarh Sahih Muslim ibn al-Hajjaj</em>.</li>
+        </ul>
+
+        <a href="index.html" class="btn" style="background:#044335; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; font-weight:bold;">&larr; Kembali Ke Beranda</a>
+    </main>
+    <footer><p>&copy; 2026 HaditsEdu.</p></footer>
+</body>
+</html>

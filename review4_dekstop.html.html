@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review UI/UX Tampilan Desktop</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; display: flex; min-height: 100vh; }
+        .mobile-header { display: none; background-color: #1e293b; color: white; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 2000; justify-content: space-between; align-items: center; border-bottom: 3px solid #64748b; }
+        .menu-toggle { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .sidebar { width: 300px; background-color: #1e293b; color: white; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 1500; transition: transform 0.3s; border-right: 4px solid #64748b; }
+        .sidebar-brand { padding: 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #334155; text-align: center; }
+        .nested-menu { list-style: none; padding: 10px 0; }
+        .menu-item-tier1 { display: block; padding: 12px 20px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; border-bottom: 1px solid #334155; }
+        .submenu-tier2 { list-style: none; background-color: #0f172a; max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .submenu-tier2.active { max-height: 500px; }
+        .menu-item-tier2 { display: block; padding: 10px 20px 10px 35px; color: #cbd5e1; text-decoration: none; font-size: 13px; cursor: pointer; }
+        .main-content { margin-left: 300px; flex: 1; padding: 40px; width: calc(100% - 300px); }
+        .panel { background: white; border-radius: 8px; padding: 30px; margin-bottom: 20px; border: 1px solid #e2e8f0; scroll-margin-top: 40px; }
+        .header-title { color: #1e293b; border-bottom: 3px solid #64748b; padding-bottom: 10px; margin-bottom: 20px; }
+        .score-box { background-color: #f1f5f9; padding: 15px; border-radius: 6px; border-left: 5px solid #1e293b; font-weight: bold; margin-top: 15px; }
+        p, li { font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        @media (max-width: 768px) { body { flex-direction: column; } .mobile-header { display: flex; } .sidebar { transform: translateX(-100%); top: 55px; width: 260px; } .sidebar.open { transform: translateX(0); } .main-content { margin-left: 0; width: 100%; padding: 20px; margin-top: 60px; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-header">
+        <div style="font-weight: bold;">Review 4: Desktop</div>
+        <button class="menu-toggle" id="menuBtn">☰</button>
+    </div>
+    <div class="sidebar" id="sidebarMenu">
+        <div class="sidebar-brand">Review UI/UX Desktop<br><span style="font-size:12px; font-weight:normal; color:#cbd5e1;">review4_2.pdf</span></div>
+        <ul class="nested-menu">
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">A. User Interface (UI) ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#ui-kelebihan" class="menu-item-tier2 nav-link">1. Kelebihan UI</a></li>
+                    <li><a href="#ui-kekurangan" class="menu-item-tier2 nav-link">2. Kekurangan UI</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">B. User Experience (UX) ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#ux-kelebihan" class="menu-item-tier2 nav-link">1. Kelebihan UX</a></li>
+                    <li><a href="#ux-kekurangan" class="menu-item-tier2 nav-link">2. Kekurangan UX</a></li>
+                </ul>
+            </li>
+            <li><a href="#kesimpulan" class="menu-item-tier1 nav-link">C. Skor & Kesimpulan</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="ui-kelebihan" class="panel">
+            <h2 class="header-title">A1. Kelebihan User Interface (UI)</h2>
+            <p>Berdasarkan review tampilan file manager desktop OneDrive Nurhasanah:</p>
+            <ul>
+                <li><strong>Desain Bersih & Modern:</strong> Menggunakan warna netral (putih & abu-abu muda) yang memberikan kesan rapi dan nyaman dipandang.</li>
+                <li><strong>Struktur Navigasi Jelas:</strong> Bagian atas terdapat breadcrumb navigation (OneDrive > Nurhasanah - Personal > Desktop).</li>
+                <li><strong>Tata Letak Terorganisir:</strong> File disusun dalam bentuk tabel yang rinci (Nama File, Status, Tanggal Modifikasi, Jenis File, Ukuran File).</li>
+                <li><strong>Ikon Mudah Dikenali:</strong> Setiap file memiliki ikon visual berbeda (PDF, Word, Shortcut, Gambar).</li>
+                <li><strong>Fitur Pencarian Mudah Diakses:</strong> Kolom pencarian berada di pojok kanan atas secara jelas.</li>
+            </ul>
+        </section>
+        <section id="ui-kekurangan" class="panel">
+            <h2 class="header-title">A2. Kekurangan User Interface (UI)</h2>
+            <ul>
+                <li>Informasi terlalu padat dan terkesan ramai bagi pengguna baru.</li>
+                <li>Ukuran tulisan data rincian relatif kecil untuk keterbatasan penglihatan.</li>
+                <li>Notifikasi pop-up sistem (Snipping Tool) di sudut bawah menutupi sebagian area kerja.</li>
+            </ul>
+        </section>
+        <section id="ux-kelebihan" class="panel">
+            <h2 class="header-title">B1. Kelebihan User Experience (UX)</h2>
+            <ul>
+                <li>Mudah dipelajari langsung tanpa tutorial karena alur navigasi familiar.</li>
+                <li>Akses file efisien dengan bantuan fitur sorting dan sidebar menu cepat di kiri.</li>
+                <li>Integrasi OneDrive yang transparan ditunjukkan melalui indikator status sinkronisasi centang hijau.</li>
+            </ul>
+        </section>
+        <section id="ux-kekurangan" class="panel">
+            <h2 class="header-title">B2. Kekurangan User Experience (UX)</h2>
+            <ul>
+                <li>Terlalu banyak file shortcut menumpuk di desktop memperlambat pencarian optimal.</li>
+                <li>Kurang ramah bagi pengguna lanjut usia yang memerlukan teks ukuran besar.</li>
+                <li>Notifikasi otomatis berisiko mengalihkan fokus tugas utama.</li>
+            </ul>
+        </section>
+        <section id="kesimpulan" class="panel">
+            <h2 class="header-title">C. Kesimpulan & Skor Akhir</h2>
+            <p>Secara keseluruhan, tampilan desktop memiliki UI yang modern, terstruktur, serta UX yang efisien. Pembenahan pada kepadatan informasi akan menyempurnakan kenyamanan kerja.</p>
+            <div class="score-box">
+                <p>Skor UI: 3.5/10</p>
+                <p>Skor UX: 8.7/10</p>
+                <p>Skor Keseluruhan: 8.6/10</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.toggle-trigger').forEach(t => t.addEventListener('click', function() { this.nextElementSibling.classList.toggle('active'); }));
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('sidebarMenu').classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => { if(window.innerWidth <= 768) document.getElementById('sidebarMenu').classList.remove('open'); }));
+    </script>
+</body>
+</html>

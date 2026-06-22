@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Website Marja Muhammad Basuki</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; display: flex; min-height: 100vh; }
+        .mobile-header { display: none; background-color: #044335; color: white; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 2000; justify-content: space-between; align-items: center; border-bottom: 3px solid #b38f43; }
+        .menu-toggle { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .sidebar { width: 300px; background-color: #044335; color: white; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 1500; transition: transform 0.3s; border-right: 4px solid #b38f43; }
+        .sidebar-brand { padding: 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #075949; text-align: center; }
+        .nested-menu { list-style: none; padding: 10px 0; }
+        .menu-item-tier1 { display: block; padding: 12px 20px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; border-bottom: 1px solid #065241; }
+        .submenu-tier2 { list-style: none; background-color: #03362a; max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .submenu-tier2.active { max-height: 500px; }
+        .menu-item-tier2 { display: block; padding: 10px 20px 10px 35px; color: #e2e8f0; text-decoration: none; font-size: 13px; cursor: pointer; }
+        .main-content { margin-left: 300px; flex: 1; padding: 40px; width: calc(100% - 300px); }
+        .panel { background: white; border-radius: 8px; padding: 30px; margin-bottom: 20px; border: 1px solid #e2e8f0; scroll-margin-top: 40px; }
+        .header-title { color: #044335; border-bottom: 3px solid #b38f43; padding-bottom: 10px; margin-bottom: 20px; }
+        .meta-table td { padding: 5px 10px; font-size: 14px; }
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 5px; font-size: 14px; }
+        p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+        @media (max-width: 768px) { body { flex-direction: column; } .mobile-header { display: flex; } .sidebar { transform: translateX(-100%); top: 55px; width: 260px; } .sidebar.open { transform: translateX(0); } .main-content { margin-left: 0; width: 100%; padding: 20px; margin-top: 60px; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-header">
+        <div style="font-weight: bold;">Review 1: Marja</div>
+        <button class="menu-toggle" id="menuBtn">☰</button>
+    </div>
+    <div class="sidebar" id="sidebarMenu">
+        <div class="sidebar-brand">Review Website Marja<br><span style="font-size:12px; font-weight:normal; color:#e2c074;">review1_2.pdf</span></div>
+        <ul class="nested-menu">
+            <li><a href="#info" class="menu-item-tier1 nav-link">A. Informasi Website</a></li>
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">B. Review Fitur ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#tampilan" class="menu-item-tier2 nav-link">1. Tampilan Awal</a></li>
+                    <li><a href="#pencarian" class="menu-item-tier2 nav-link">2. Fitur Pencarian</a></li>
+                    <li><a href="#konten" class="menu-item-tier2 nav-link">3. Navigasi Konten</a></li>
+                </ul>
+            </li>
+            <li><a href="#kesimpulan" class="menu-item-tier1 nav-link">C. Kesimpulan</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="info" class="panel">
+            <h2 class="header-title">A. Informasi Website</h2>
+            <table class="meta-table">
+                <tr><td><strong>Website</strong></td><td>: https://muhamadbasuki.web.id/hadis/#gsc.tab=0</td></tr>
+                <tr><td><strong>Bahasa</strong></td><td>: Indonesia</td></tr>
+                <tr><td><strong>Fungsi</strong></td><td>: Pencarian hadist dengan Riwayat dan pembahasan tertentu</td></tr>
+                <tr><td><strong>Reviewer</strong></td><td>: Nurhasanah (NIM: 2313050306)</td></tr>
+                <tr><td><strong>Dosen Pengampu</strong></td><td>: Muhammad Alif S,Ag.</td></tr>
+            </table>
+        </section>
+        <section id="tampilan" class="panel">
+            <h2 class="header-title">B1. Tampilan Awal</h2>
+            <p>Pada tampak awal, user akan disuguhkan penampilan yang cukup menarik, pencampuran warna hijau tua di bagian atas dan warna abu-abu yang mendominasi membuat nyaman di mata. Ditambah dengan secuil lafazh Arab yang lebih menambah terlihat autentik dan memiliki aura keilmuan yang kuat.</p>
+        </section>
+        <section id="pencarian" class="panel">
+            <h2 class="header-title">B2. Fitur Pencarian</h2>
+            <p>Secara jeli, ada beberapa garis dengan warna yang berbeda pada fitur pencarian:</p>
+            <ul>
+                <li><strong>Garis merah:</strong> Adalah fitur pencariaan yang sama fungsinya seperti search pada google.</li>
+                <li><strong>Garis kuning:</strong> Adalah fitur pencarian untuk bahasa Arab.</li>
+                <li><strong>Garis hijau:</strong> Adalah fitur untuk klasifikasi kitab hadits.</li>
+            </ul>
+            <p>Fitur hasil pencarian (misalnya kata kunci "sandal") menampilkan berbagai terjemahan yang sesuai dengan kata kunci, kitab, nomor hadits, serta sub bab tertentu demi menghilangkan ketidakpastian.</p>
+        </section>
+        <section id="konten" class="panel">
+            <h2 class="header-title">B3. Navigasi Konten</h2>
+            <p>Jika user scroll sedikit ke bawah maka akan ditemukan jenis-jenis kitab hadits dan jumlah hadits yang terdapat padanya. Terdapat pula:</p>
+            <ul>
+                <li>Fitur pengaturan yang berfungsi sebagai penyembunyi transliterasi, terjemah, dan link tafsir.</li>
+                <li>Navigasi yang mengarahkan user langsung ke halaman atas.</li>
+                <li>Bagian footer berisi info tambahan, pencarian konten, serta akses menuju akun X dan Instagram pribadi developer.</li>
+            </ul>
+        </section>
+        <section id="kesimpulan" class="panel">
+            <h2 class="header-title">C. Kesimpulan</h2>
+            <p>Bagi pen-review, website ini sudah bagus dan lengkap dengan fitur-fitur berguna, sehingga terlihat modern. Ini memudahkan para pengakses dalam mnyelami hadits-hadits dengan tema, riwayat, dan perawi tertentu.</p>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.toggle-trigger').forEach(t => t.addEventListener('click', function() { this.nextElementSibling.classList.toggle('active'); }));
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('sidebarMenu').classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => { if(window.innerWidth <= 768) document.getElementById('sidebarMenu').classList.remove('open'); }));
+    </script>
+</body>
+</html>

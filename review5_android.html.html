@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Aplikasi Ensiklopedi Hadits</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; display: flex; min-height: 100vh; }
+        .mobile-header { display: none; background-color: #044335; color: white; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 2000; justify-content: space-between; align-items: center; border-bottom: 3px solid #b38f43; }
+        .menu-toggle { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .sidebar { width: 300px; background-color: #044335; color: white; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 1500; transition: transform 0.3s; border-right: 4px solid #b38f43; }
+        .sidebar-brand { padding: 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #075949; text-align: center; }
+        .nested-menu { list-style: none; padding: 10px 0; }
+        .menu-item-tier1 { display: block; padding: 12px 20px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; border-bottom: 1px solid #065241; }
+        .submenu-tier2 { list-style: none; background-color: #03362a; max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .submenu-tier2.active { max-height: 500px; }
+        .menu-item-tier2 { display: block; padding: 10px 20px 10px 35px; color: #e2e8f0; text-decoration: none; font-size: 13px; cursor: pointer; }
+        .main-content { margin-left: 300px; flex: 1; padding: 40px; width: calc(100% - 300px); }
+        .panel { background: white; border-radius: 8px; padding: 30px; margin-bottom: 20px; border: 1px solid #e2e8f0; scroll-margin-top: 40px; }
+        .header-title { color: #044335; border-bottom: 3px solid #b38f43; padding-bottom: 10px; margin-bottom: 20px; }
+        .meta-table td { padding: 5px 10px; font-size: 14px; }
+        p, li { font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        @media (max-width: 768px) { body { flex-direction: column; } .mobile-header { display: flex; } .sidebar { transform: translateX(-100%); top: 55px; width: 260px; } .sidebar.open { transform: translateX(0); } .main-content { margin-left: 0; width: 100%; padding: 20px; margin-top: 60px; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-header">
+        <div style="font-weight: bold;">Review 5: Android App</div>
+        <button class="menu-toggle" id="menuBtn">☰</button>
+    </div>
+    <div class="sidebar" id="sidebarMenu">
+        <div class="sidebar-brand">Review Ensiklopedi Hadits<br><span style="font-size:12px; font-weight:normal; color:#e2c074;">review5_2.pdf</span></div>
+        <ul class="nested-menu">
+            <li><a href="#info" class="menu-item-tier1 nav-link">A. Info Aplikasi</a></li>
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">B. Review Tampilan ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#beranda" class="menu-item-tier2 nav-link">1. Fitur Tanya AI Beranda</a></li>
+                    <li><a href="#kutubut-tisah" class="menu-item-tier2 nav-link">2. Kitab Kutubut Tis'ah</a></li>
+                    <li><a href="#lembar-kerja" class="menu-item-tier2 nav-link">3. Tampilan Lembar Teks</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">C. Analisis Fitur ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#kelebihan" class="menu-item-tier2 nav-link">1. Kelebihan Aplikasi</a></li>
+                    <li><a href="#kekurangan" class="menu-item-tier2 nav-link">2. Kekurangan Aplikasi</a></li>
+                </ul>
+            </li>
+            <li><a href="#kesimpulan" class="menu-item-tier1 nav-link">D. Kesimpulan</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="info" class="panel">
+            <h2 class="header-title">A. Info Aplikasi</h2>
+            <table class="meta-table">
+                <tr><td><strong>Nama Aplikasi</strong></td><td>: Ensiklopedi Hadits</td></tr>
+                <tr><td><strong>Bahasa</strong></td><td>: Indonesia</td></tr>
+                <tr><td><strong>Ukuran Aplikasi</strong></td><td>: 307 MB</td></tr>
+                <tr><td><strong>Asal Negara</strong></td><td>: Indonesia</td></tr>
+                <tr><td><strong>Reviewer</strong></td><td>: Nurhasanah (NIM: 251305036)</td></tr>
+            </table>
+        </section>
+        <section id="beranda" class="panel">
+            <h2 class="header-title">B1. Fitur Tanya AI Halaman Beranda</h2>
+            <p>Saat pertama kali dibuka, user diarahkan ke halaman beranda yang menyediakan fitur kecerdasan buatan "Tanya AI" (dibatasi 1 kali seminggu untuk non-pro). Di sampingnya terdapat fitur pencarian biasa untuk memfilter kata kunci serta daftar riwayat pencarian terakhir harian.</p>
+        </section>
+        <section id="kutubut-tisah" class="panel">
+            <h2 class="header-title">B2. Menu Utama Kitab Kutubut Tis'ah</h2>
+            <p>Menyuguhkan 9 macam kitab hadits shahih digital sebagai rujukan utama: Shahih Bukhari, Shahih Muslim, Sunan Abu Daud, Sunan Tirmidzi, Sunan Nasa'i, Sunan Ibnu Majah, Muwatha' Malik, Musnad Ahmad, dan Sunan Darimi.</p>
+        </section>
+        <section id="lembar-kerja" class="panel">
+            <h2 class="header-title">B3. Tampilan Lembar Teks Hadits</h2>
+            <p>Saat mengklik salah satu isi teks (contoh teks Syarh Shahih Muslim - 1), halaman memuat status/derajat kekuatan hadis (contoh: Shahih), nama judul bab, baris teks Arab asli beserta teks terjemahannya. Terdapat rincian susunan silsilah jalur perawi sanad demi memperjelas asbabul wurud, serta menu bagikan (share) format gambar/teks.</p>
+        </section>
+        <section id="kelebihan" class="panel">
+            <h2 class="header-title">C1. Kelebihan</h2>
+            <ol>
+                <li>Sangat praktis dan mudah diakses di mana saja tanpa membawa fisik kitab buku tebal.</li>
+                <li>Terdapat fitur AI khusus untuk memproses pencarian hadits.</li>
+                <li>Memiliki fitur galeri hadits, hadits tematik, podcast hadits, dan kartu ucapan.</li>
+            </ol>
+        </section>
+        <section id="kekurangan" class="panel">
+            <h2 class="header-title">C2. Kekurangan</h2>
+            <ol>
+                <li>Fitur tambahan pendukung sebagian besar dikunci dan menganjurkan beralih ke akun premium.</li>
+                <li>Fitur tanya jawab berbasis AI dibatasi ketat bagi pengguna non-premium.</li>
+                <li>Membagikan kutipan teks utuh mengharuskan upgrade berbayar.</li>
+            </ol>
+        </section>
+        <section id="kesimpulan" class="panel">
+            <h2 class="header-title">D. Kesimpulan</h2>
+            <p>Aplikasi Ensiklopedi Hadis sangat efektif, modern, dan adaptif membantu menghemat waktu pencarian referensi keislaman bagi pelajar, mahasiswa, maupun akademisi umum di era digital.</p>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.toggle-trigger').forEach(t => t.addEventListener('click', function() { this.nextElementSibling.classList.toggle('active'); }));
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('sidebarMenu').classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => { if(window.innerWidth <= 768) document.getElementById('sidebarMenu').classList.remove('open'); }));
+    </script>
+</body>
+</html>

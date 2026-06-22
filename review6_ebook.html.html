@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review E-Book Studi Al-Qur'an dan Hadis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; display: flex; min-height: 100vh; }
+        .mobile-header { display: none; background-color: #044335; color: white; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 2000; justify-content: space-between; align-items: center; border-bottom: 3px solid #b38f43; }
+        .menu-toggle { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .sidebar { width: 300px; background-color: #044335; color: white; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 1500; transition: transform 0.3s; border-right: 4px solid #b38f43; }
+        .sidebar-brand { padding: 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #075949; text-align: center; }
+        .nested-menu { list-style: none; padding: 10px 0; }
+        .menu-item-tier1 { display: block; padding: 12px 20px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; border-bottom: 1px solid #065241; }
+        .submenu-tier2 { list-style: none; background-color: #03362a; max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .submenu-tier2.active { max-height: 500px; }
+        .menu-item-tier2 { display: block; padding: 10px 20px 10px 35px; color: #e2e8f0; text-decoration: none; font-size: 13px; cursor: pointer; }
+        .main-content { margin-left: 300px; flex: 1; padding: 40px; width: calc(100% - 300px); }
+        .panel { background: white; border-radius: 8px; padding: 30px; margin-bottom: 20px; border: 1px solid #e2e8f0; scroll-margin-top: 40px; }
+        .header-title { color: #044335; border-bottom: 3px solid #b38f43; padding-bottom: 10px; margin-bottom: 20px; }
+        .meta-table td { padding: 5px 10px; font-size: 14px; }
+        p, li { font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        @media (max-width: 768px) { body { flex-direction: column; } .mobile-header { display: flex; } .sidebar { transform: translateX(-100%); top: 55px; width: 260px; } .sidebar.open { transform: translateX(0); } .main-content { margin-left: 0; width: 100%; padding: 20px; margin-top: 60px; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-header">
+        <div style="font-weight: bold;">Review 6: E-Book</div>
+        <button class="menu-toggle" id="menuBtn">☰</button>
+    </div>
+    <div class="sidebar" id="sidebarMenu">
+        <div class="sidebar-brand">Review E-Book<br><span style="font-size:12px; font-weight:normal; color:#e2c074;">review6_2.pdf</span></div>
+        <ul class="nested-menu">
+            <li><a href="#identitas" class="menu-item-tier1 nav-link">A. Identitas Buku</a></li>
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">B. Gambaran Isi ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#urgensi" class="menu-item-tier2 nav-link">1. Esensi & Urgensi</a></li>
+                    <li><a href="#ilmu-hadits" class="menu-item-tier2 nav-link">2. Pengertian Ilmu Hadits</a></li>
+                    <li><a href="#fungsi-hadits" class="menu-item-tier2 nav-link">3. 5 Fungsi Hadits</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="identitas" class="panel">
+            <h2 class="header-title">A. Identitas Buku</h2>
+            <table class="meta-table">
+                <tr><td><strong>Judul Buku</strong></td><td>: Studi Al-Qur'an dan Hadis (Cetakan Ketiga, 2020)</td></tr>
+                <tr><td><strong>Penulis</strong></td><td>: Dr. Hj. Umi Sumbulah, M.Ag.</td></tr>
+                <tr><td><strong>Editor</strong></td><td>: Mohammad Karim</td></tr>
+                <tr><td><strong>Penerbit</strong></td><td>: UIN-Maliki Press (Ukuran: 16×24 cm, XII + 404 hlm)</td></tr>
+                <tr><td><strong>No ISBN</strong></td><td>: 978-602-1190-44-9</td></tr>
+                <tr><td><strong>Reviewer</strong></td><td>: Nurhasanah (NIM: 251305036)</td></tr>
+            </table>
+        </section>
+        <section id="urgensi" class="panel">
+            <h2 class="header-title">B1. Esensi & Urgensi Hubungan Tasyri</h2>
+            <p>Buku ini merupakan literatur dasar baik sebagai rujukan pemula. Dijelaskan bahwa Al-Qur'an dan Hadis, kendati memiliki posisi berbeda dalam tatanan hukum tasyri Islam, keduanya memiliki urgensi sangat penting dan saling membutuhkan dalam praktiknya.</p>
+        </section>
+        <section id="ilmu-hadits" class="panel">
+            <h2 class="header-title">B2. Pengertian Dasar Ilmu Hadits</h2>
+            <p>Ilmu hadits didefinisikan sebagai ilmu pengetahuan yang mempelajari tentang sesuatu yang disandarkan kepada Rasulullah SAW, baik berupa perkataan, perbuatan, taqrir (ketetapan), atau sifat-sifat kepribadiannya.</p>
+        </section>
+        <section id="fungsi-hadits" class="panel">
+            <h2 class="header-title">B3. 5 Fungsi Urgen Hadits Terhadap Ayat Global</h2>
+            <p>Karena ayat Al-Qur'an bernilai universal, hadits berfungsi operasional menerangkan teknis di lapangan melalui 5 peran utama:</p>
+            <ul>
+                <li><strong>Bayan al-Ta'kid:</strong> Memperkuat dasar ketetapan hukum ayat Al-Qur'an.</li>
+                <li><strong>Bayan al-Taqyid:</strong> Membatasi cakupan pernyataan ayat Al-Qur'an yang masih mutlak.</li>
+                <li><strong>Bayan al-Tafshil/Tafsir:</strong> Memerinci aturan teknis ayat Al-Qur'an yang global.</li>
+                <li><strong>Bayan al-Tasyri':</strong> Menambahkan aturan ketetapan hukum baru yang belum termuat di Al-Qur'an.</li>
+                <li><strong>Bayan al-Naskh:</strong> Menghapus hukum (memicu kontroversi di kalangan ulama).</li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.toggle-trigger').forEach(t => t.addEventListener('click', function() { this.nextElementSibling.classList.toggle('active'); }));
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('sidebarMenu').classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => { if(window.innerWidth <= 768) document.getElementById('sidebarMenu').classList.remove('open'); }));
+    </script>
+</body>
+</html>

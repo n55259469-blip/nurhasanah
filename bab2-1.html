@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB II: Pendidikan Sosial - HaditsEdu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #044335;
+            border-bottom: 5px solid #b38f43;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #e2c074;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: #075949;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .bab-title {
+            text-align: center;
+            color: #044335;
+            margin-bottom: 40px;
+        }
+
+        .bab-title h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        .bab-title p {
+            color: #b38f43;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .hadis-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .hadis-meta {
+            font-size: 14px;
+            color: #b38f43;
+            font-weight: bold;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .hadis-arabic {
+            font-size: 26px;
+            line-height: 2;
+            text-align: right;
+            direction: rtl;
+            margin-bottom: 20px;
+            color: #044335;
+            font-weight: 500;
+        }
+
+        .hadis-translation {
+            background-color: #f8fafc;
+            border-left: 4px solid #044335;
+            padding: 15px;
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .hadis-rawi {
+            font-size: 13px;
+            font-weight: bold;
+            color: #64748b;
+            text-align: right;
+        }
+
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .btn-nav {
+            background-color: #044335;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-nav:hover {
+            background-color: #b38f43;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Hadits<span>Edu</span></a>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="muqaddimah.html" class="nav-link">Muqaddimah</a>
+            <a href="bab1-1.html" class="nav-link">BAB I</a>
+            <a href="bab2-1.html" class="nav-link active">BAB II</a>
+            <a href="penulis.html" class="nav-link">Penulis & Pustaka</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="bab-title">
+            <h1>BAB II</h1>
+            <p>Pendidikan Sosial</p>
+        </div>
+
+        <!-- HADIS 1 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">1. Persaudaraan Sesama Muslim</div>
+            <div class="hadis-arabic">عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «الْمُسْلِمُ أَخُو الْمُسْلِمِ»</div>
+            <div class="hadis-translation">"Seorang muslim adalah saudara bagi muslim lainnya."</div>
+            <div class="hadis-rawi">(HR. Bukhari dan Muslim)</div>
+        </div>
+
+        <!-- HADIS 2 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">2. Tolong-Menolong</div>
+            <div class="hadis-arabic">عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «وَاللَّهُ فِي عَوْنِ الْعَبْدِ مَا كَانَ الْعَبْدُ فِي عَوْنِ أَخِيهِ»</div>
+            <div class="hadis-translation">"Allah akan menolong seorang hamba selama ia menolong saudaranya."</div>
+            <div class="hadis-rawi">(HR. Muslim)</div>
+        </div>
+
+        <!-- HADIS 3 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">3. Menjaga Silaturahmi</div>
+            <div class="hadis-arabic">عَنْ أَنَسِ بْنِ مَالِكٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «مَنْ أَحَبَّ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ وَيُنْسَأَ لَهُ فِي أَثَرِهِ فَلْيَصِلْ رَحِمَهُ»</div>
+            <div class="hadis-translation">"Barang siapa ingin dilapangkan rezekinya dan dipanjangkan umurnya, maka hendaklah ia menyambung silaturahmi."</div>
+            <div class="hadis-rawi">(HR. Bukhari dan Muslim)</div>
+        </div>
+
+        <!-- HADIS 4 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">4. Menghormati Tetangga</div>
+            <div class="hadis-arabic">عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْYَوْمِ الْآخِرِ فَلْيُكْرِمْ جَارَهُ»</div>
+            <div class="hadis-translation">"Barang siapa beriman kepada Allah dan hari akhir, hendaklah ia memuliakan tetangganya."</div>
+            <div class="hadis-rawi">(HR. Bukhari dan Muslim)</div>
+        </div>
+
+        <!-- HADIS 5 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">5. Memberi Manfaat kepada Orang Lain</div>
+            <div class="hadis-arabic">عَنْ جَابِرٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ»</div>
+            <div class="hadis-translation">"Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lainnya."</div>
+            <div class="hadis-rawi">(HR. Thabrani)</div>
+        </div>
+
+        <!-- HADIS 6 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">6. Larangan Menyakiti Sesama</div>
+            <div class="hadis-arabic">عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو رضي الله عنهما قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ»</div>
+            <div class="hadis-translation">"Seorang muslim adalah orang yang kaum muslimin selamat dari gangguan lisan dan tangannya."</div>
+            <div class="hadis-rawi">(HR. Bukhari dan Muslim)</div>
+        </div>
+
+        <!-- HADIS 7 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">7. Menebarkan Salam</div>
+            <div class="hadis-arabic">عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «أَفْشُوا السَّلَامَ بَيْنَكُمْ»</div>
+            <div class="hadis-translation">"Sebahkanlah salam di antara kalian."</div>
+            <div class="hadis-rawi">(HR. Muslim)</div>
+        </div>
+
+        <!-- HADIS 8 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">8. Menghilangkan Kesulitan Orang Lain</div>
+            <div class="hadis-arabic">عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «مَنْ نَفَّسَ عَنْ مُؤْمِنٍ كُرْبَةً مِنْ كُرَبِ الدُّنْيَا نَفَّسَ اللَّهُ عَنْهُ كُرْبَةً مِنْ كُرَبِ يَوْمِ الْقِيَامَةِ»</div>
+            <div class="hadis-translation">"Barang siapa meringankan kesulitan seorang mukmin di dunia, Allah akan meringankan kesulitannya pada hari kiamat."</div>
+            <div class="hadis-rawi">(HR. Muslim)</div>
+        </div>
+
+        <!-- HADIS 9 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">9. Larangan Hasad</div>
+            <div class="hadis-arabic">عَنْ أَبِي هُرَيْرَةَ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «لَا تَحَاسَدُوا وَلَا تَبَاغَضُوا»</div>
+            <div class="hadis-translation">"Janganlah kalian saling dengki dan jangan saling membenci."</div>
+            <div class="hadis-rawi">(HR. Muslim)</div>
+        </div>
+
+        <!-- HADIS 10 -->
+        <div class="hadis-card">
+            <div class="hadis-meta">10. Mencintai Sesama Muslim</div>
+            <div class="hadis-arabic">عَنْ أَنَسِ بْنِ مَالِكٍ رضي الله عنه قَالَ: قَالَ رَسُولُ اللَّهِ ﷺ «لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ Lِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ»</div>
+            <div class="hadis-translation">"Tidak sempurna iman salah seorang di antara kalian sampai ia mencintai saudaranya sebagaimana ia mencintai dirinya sendiri."</div>
+            <div class="hadis-rawi">(HR. Bukhari dan Muslim)</div>
+        </div>
+
+        <!-- NAVIGASI BAWAH -->
+        <div class="page-navigation">
+            <a href="bab1-1.html" class="btn-nav">&larr; Kembali (BAB I)</a>
+            <a href="penulis.html" class="btn-nav">Lanjut ke Penulis & Pustaka &rarr;</a>
+        </div>
+    </div>
+
+</body>
+</html>

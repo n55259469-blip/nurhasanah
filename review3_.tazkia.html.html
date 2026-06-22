@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Website Hadits Tazkia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; display: flex; min-height: 100vh; }
+        .mobile-header { display: none; background-color: #044335; color: white; padding: 15px; position: fixed; top: 0; left: 0; right: 0; z-index: 2000; justify-content: space-between; align-items: center; border-bottom: 3px solid #b38f43; }
+        .menu-toggle { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .sidebar { width: 300px; background-color: #044335; color: white; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; z-index: 1500; transition: transform 0.3s; border-right: 4px solid #b38f43; }
+        .sidebar-brand { padding: 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #075949; text-align: center; }
+        .nested-menu { list-style: none; padding: 10px 0; }
+        .menu-item-tier1 { display: block; padding: 12px 20px; color: white; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; border-bottom: 1px solid #065241; }
+        .submenu-tier2 { list-style: none; background-color: #03362a; max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .submenu-tier2.active { max-height: 500px; }
+        .menu-item-tier2 { display: block; padding: 10px 20px 10px 35px; color: #e2e8f0; text-decoration: none; font-size: 13px; cursor: pointer; }
+        .main-content { margin-left: 300px; flex: 1; padding: 40px; width: calc(100% - 300px); }
+        .panel { background: white; border-radius: 8px; padding: 30px; margin-bottom: 20px; border: 1px solid #e2e8f0; scroll-margin-top: 40px; }
+        .header-title { color: #044335; border-bottom: 3px solid #b38f43; padding-bottom: 10px; margin-bottom: 20px; }
+        .meta-table td { padding: 5px 10px; font-size: 14px; }
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 5px; font-size: 14px; }
+        p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+        @media (max-width: 768px) { body { flex-direction: column; } .mobile-header { display: flex; } .sidebar { transform: translateX(-100%); top: 55px; width: 260px; } .sidebar.open { transform: translateX(0); } .main-content { margin-left: 0; width: 100%; padding: 20px; margin-top: 60px; } }
+    </style>
+</head>
+<body>
+    <div class="mobile-header">
+        <div style="font-weight: bold;">Review 3: Hadits Tazkia</div>
+        <button class="menu-toggle" id="menuBtn">☰</button>
+    </div>
+    <div class="sidebar" id="sidebarMenu">
+        <div class="sidebar-brand">Review Website Hadits Tazkia<br><span style="font-size:12px; font-weight:normal; color:#e2c074;">review3_2.pdf</span></div>
+        <ul class="nested-menu">
+            <li><a href="#info" class="menu-item-tier1 nav-link">A. Informasi Website</a></li>
+            <li>
+                <div class="menu-item-tier1 toggle-trigger">B. Review Fitur Tampilan ▾</div>
+                <ul class="submenu-tier2">
+                    <li><a href="#menu-utama" class="menu-item-tier2 nav-link">1. Pengaturan Tampilan</a></li>
+                    <li><a href="#sanad" class="menu-item-tier2 nav-link">2. Jalur Sanad & Matan</a></li>
+                </ul>
+            </li>
+            <li><a href="#kekurangan" class="menu-item-tier1 nav-link">C. Kekurangan</a></li>
+            <li><a href="#kesimpulan" class="menu-item-tier1 nav-link">D. Kesimpulan</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="info" class="panel">
+            <h2 class="header-title">A. Informasi Website</h2>
+            <table class="meta-table">
+                <tr><td><strong>Website</strong></td><td>: https://hadits.tazkia.ac.id/</td></tr>
+                <tr><td><strong>Bahasa</strong></td><td>: Indonesia</td></tr>
+                <tr><td><strong>Fungsi</strong></td><td>: Pencarian hadist dengan riwayat dan Pembahasan tertentu</td></tr>
+                <tr><td><strong>Reviewer</strong></td><td>: Nurhasanah (Oleh NIM: 251305036)</td></tr>
+                <tr><td><strong>Dosen Pengampu</strong></td><td>: Muhammad Alif S, Ag.</td></tr>
+            </table>
+        </section>
+        <section id="menu-utama" class="panel">
+            <h2 class="header-title">B1. Pengaturan Tampilan Utama</h2>
+            <ul>
+                <li><strong>Ikon Matahari/Bulan:</strong> Tombol untuk mengatur tema tampilan layar (Dark Mode/Light Mode) agar nyaman di mata saat membaca hadits.</li>
+                <li><strong>Menu Tema:</strong> Merujuk pada pengelompokan hadits berdasarkan topik pembahasan tertentu (akhlak, ibadah, muamalah).</li>
+                <li><strong>Menu Kedudukan:</strong> Merujuk pada derajat keaslian hadits (Shahih, Hasan, atau Da'if).</li>
+            </ul>
+            <p>Daftar kitab referensi utama yang ditampilkan meliputi Shahih Bukhari, Shahih Muslim, Sunan Tirmidzi, Sunan Abu Dawud, dan Sunan Nasa'i.</p>
+        </section>
+        <section id="sanad" class="panel">
+            <h2 class="header-title">B2. Fitur Jalur Sanad & Hadits Serupa</h2>
+            <ul>
+                <li><strong>Fitur Sanad:</strong> Menampilkan diagram silsilah para perawi secara berurutan dalam kotak biru yang menunjukkan rangkaian periwayatan hadits dari Rasulullah SAW sampai ke penyusun kitab.</li>
+                <li><strong>Fitur Hadits Serupa:</strong> Menyediakan daftar hadits lain dengan esensi makna yang setema sebagai penguat (syawahid) bacaan.</li>
+            </ul>
+        </section>
+        <section id="kekurangan" class="panel">
+            <h2 class="header-title">C. Kekurangan</h2>
+            <ol>
+                <li>Keaslian hadis kadang tidak jelas bagi pemula.</li>
+                <li>Kurang kontekstual dengan kehidupan modern.</li>
+                <li>Penafsiran yang terlalu subjektif.</li>
+            </ol>
+        </section>
+        <section id="kesimpulan" class="panel">
+            <h2 class="header-title">D. Kesimpulan</h2>
+            <p>Kesimpulan dari hadis-hadis tentang tazkiyah (penyucian jiwa) adalah bahwa Islam sangat menekankan pentingnya membersihkan hati dari sifat buruk dan menghiasinya dengan akhlak yang baik demi pribadi muslim yang seimbang secara spiritual, moral, maupun sosial.</p>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.toggle-trigger').forEach(t => t.addEventListener('click', function() { this.nextElementSibling.classList.toggle('active'); }));
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('sidebarMenu').classList.toggle('open'));
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => { if(window.innerWidth <= 768) document.getElementById('sidebarMenu').classList.remove('open'); }));
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Tugas Review & E-Book - Nurhasanah</title>
+    <style>
+        /* Membuat efek scroll menjadi mulus saat menu diklik */
+        html { scroll-behavior: smooth; }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f6f8; color: #2c3e50; min-height: 100vh; padding-top: 60px; }
+        
+        /* MENU NAVIGASI UTAMA (BARU) */
+        .navbar { position: fixed; top: 0; left: 0; right: 0; height: 60px; background-color: #033026; display: flex; justify-content: center; align-items: center; gap: 20px; z-index: 1000; border-bottom: 3px solid #b38f43; }
+        .navbar a { color: white; text-decoration: none; font-size: 15px; font-weight: 600; padding: 8px 16px; border-radius: 4px; transition: background 0.2s; }
+        .navbar a:hover { background-color: #b38f43; }
+
+        /* Header */
+        header { background-color: #044335; color: white; text-align: center; padding: 40px 20px; border-bottom: 5px solid #b38f43; }
+        header h1 { font-size: 28px; margin-bottom: 10px; }
+        header p { font-size: 14px; color: #e2c074; }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+        /* Section Title */
+        .section-title { color: #044335; border-bottom: 3px solid #b38f43; padding-bottom: 8px; margin-top: 40px; margin-bottom: 25px; font-size: 22px; display: flex; align-items: center; gap: 10px; scroll-margin-top: 80px; }
+        
+        /* Grid System */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-bottom: 50px; }
+
+        /* Card Style */
+        .card { background: white; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card-header { background-color: #065241; color: white; padding: 15px 20px; font-weight: bold; font-size: 15px; border-bottom: 2px solid #b38f43; }
+        .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-meta { font-size: 13px; color: #7f8c8d; margin-bottom: 12px; }
+        .card-text { font-size: 14px; line-height: 1.5; color: #555; margin-bottom: 20px; }
+        
+        /* Button Link */
+        .btn-open { display: block; text-align: center; background-color: #044335; color: white; text-decoration: none; padding: 10px; border-radius: 4px; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+        .btn-open:hover { background-color: #b38f43; }
+
+        /* Footer */
+        footer { text-align: center; padding: 25px; color: #7f8c8d; font-size: 13px; border-top: 1px solid #e2e8f0; background: white; margin-top: 40px; }
+
+        /* Responsive */
+        @media (max-width: 768px) { header h1 { font-size: 22px; } .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <!-- TOMBOL MENU DI ATAS -->
+    <nav class="navbar">
+        <a href="#review-section">📁 Index Review</a>
+        <a href="#ebook-section">📖 Index E-Book</a>
+    </nav>
+
+    <header>
+        <h1>Portal Tugas Review Digital</h1>
+        <p>Nurhasanah • NIM: 251305036 / 2313050306 • Dosen Pengampu: Muhammad Alif S,Ag.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- KATEGORI 1: INDEX REVIEW -->
+        <h2 id="review-section" class="section-title">📁 Index Review (Website, Aplikasi & UI/UX)</h2>
+        <div class="grid">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">Review 1: Website Marja</div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-meta">File: review1_marja.html</div>
+                        <p class="card-text">Analisis fitur pencarian hadits komprehensif pada website Muhamad Basuki dengan klasifikasi warna garis pencarian.</p>
+                    </div>
+                    <a href="review1_marja.html" class="btn-open">Buka Review →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">Review 2: Website Hadits.id</div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-meta">File: review2_haditsid.html</div>
+                        <p class="card-text">Evaluasi fitur pencarian acak, tracker hafalan, fitur salin kutipan, hingga analisis sistem donasi QRIS.</p>
+                    </div>
+                    <a href="review2_haditsid.html" class="btn-open">Buka Review →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">Review 3: Website Hadits Tazkia</div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-meta">File: review3_tazkia.html</div>
+                        <p class="card-text">Tinjauan fitur diagram silsilah jalur sanad perawi, pengaturan tema Dark Mode, dan relevansi teks keagamaan.</p>
+                    </div>
+                    <a href="review3_tazkia.html" class="btn-open">Buka Review →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-header">Review 4: UI/UX Tampilan Desktop</div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-meta">File: review4_desktop.html</div>
+                        <p class="card-text">Analisis antarmuka (UI) file manager OneDrive personal serta penilaian kenyamanan pengalaman pengguna (UX).</p>
+                    </div>
+                    <a href="review4_desktop.html" class="btn-open">Buka Review →</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-header">Review 5: Aplikasi Ensiklopedi Hadits</div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-meta">File: review5_android.html</div>
+                        <p class="card-text">Review aplikasi mobile Android Kutubut Tis'ah yang dilengkapi dengan fitur asisten digital berbasis kecerdasan buatan (Tanya AI).</p>
+                    </div>
+                    <a href="review5_android.html" class="btn-open">Buka Review →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- KATEGORI 2: INDEX E-BOOK -->
+        <h2 id="ebook-section" class="section-title">📖 Index E-Book</h2>
+        <div class="grid">
+            
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="card-header" style="background-color: #b38f43;">Review 6: E-Book Studi Al-Qur'an & Hadis</div>
+                <div class="card-body">
+                    <div>
+                        <div class="card-meta">File: review6_ebook.html</div>
+                        <p class="card-text">Bedah buku karya Dr. Hj. Umi Sumbulah, M.Ag. Mengenai esensi hubungan tasyri serta 5 fungsi urgen hadits terhadap ayat global.</p>
+                    </div>
+                    <a href="review6_ebook.html" class="btn-open" style="background-color: #b38f43;">Buka E-Book →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Nurhasanah. All Rights Reserved. dibuat untuk memenuhi tugas mata kuliah Studi Hadis Digital.
+    </footer>
+
+</body>
+</html>
